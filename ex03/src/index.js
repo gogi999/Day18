@@ -9,7 +9,7 @@ let iterator = myGenerator(6, 7, 8);
 let generatorArray = [];
 
 for (let value of iterator) {
-    generatorArray.push(value)
+    generatorArray.push(value);
 }
 
 console.log(generatorArray);
