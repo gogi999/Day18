@@ -27,7 +27,11 @@ const iterator = myGenerator();
 iterator.next().value;
 
 let fifteenArray = [];
-fifteenArray = [...iterator];
+
+for (let value of iterator) {
+    fifteenArray.push(value);
+}
+
 console.log(fifteenArray.join("#, "));
 // Only change code above this line
 module.exports = { fifteenArray, myGenerator };
