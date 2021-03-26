@@ -13,7 +13,6 @@ for (let groceries of shoppingList.entries()) {
     arrKey = [...shoppingList.keys()];
     console.log(`groceries: ${groceries[0]}`);
 }
-
 let arrValue = [];
 
 for (let amount of shoppingList.entries()) {
