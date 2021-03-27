@@ -9,19 +9,19 @@ let shoppingList = new Map([
 
 let arrKey = [];
 
-arrKey = [...shoppingList].forEach((key) => {
+arrKey = [...shoppingList];
+arrKey.forEach((key) => {
     console.log(`groceries: ${key[0]}`);
 });
-arrKey = [arrKey];
-//console.log(arrKey instanceof Array);
+// console.log(arrKey instanceof Array);
 
 let arrValue = [];
 
-arrValue = [...shoppingList].forEach((val) => {
+arrValue = [...shoppingList];
+arrValue.forEach((val) => {
     console.log(`amount: ${val[1]}`);
 });
-arrValue = [arrValue];
-//console.log(arrKey instanceof Array)
+// console.log(arrKey instanceof Array)
 
 for (let entry of shoppingList.entries()) {
     console.log(`['${entry[0]}', ${entry[1]}]`);
