@@ -9,19 +9,22 @@ let shoppingList = new Map([
 
 let arrKey = [];
 
-for (let groceries of shoppingList.entries()) {
-    arrKey = [...shoppingList.keys()];
-    console.log(`groceries: ${groceries[0]}`);
-}
+arrKey = [...shoppingList].forEach((key) => {
+    console.log(`groceries: ${key[0]}`);
+});
+arrKey = [arrKey];
+//console.log(arrKey instanceof Array);
+
 let arrValue = [];
 
-for (let amount of shoppingList.entries()) {
-    arrValue = [...shoppingList.values()];
-    console.log(`amount: ${amount[1]}`);
-}
+arrValue = [...shoppingList].forEach((val) => {
+    console.log(`amount: ${val[1]}`);
+});
+arrValue = [arrValue];
+//console.log(arrKey instanceof Array)
 
-for (let col of shoppingList.entries()) {
-    console.log(`['${col[0]}', ${col[1]}]`);
+for (let entry of shoppingList.entries()) {
+    console.log(`['${entry[0]}', ${entry[1]}]`);
 }
 // Only change code above this line
-module.exports = { shoppingList, arrKey, /*arrValue*/ };
+module.exports = { shoppingList, arrKey, arrValue };
