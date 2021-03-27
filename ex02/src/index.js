@@ -26,12 +26,12 @@ function* insideGenerator3() {
 const iterator = myGenerator();
 iterator.next().value;
 
-let fifteenArray = [];
-
-for (let value of iterator) {
-    fifteenArray.push(value);
+const fifteenArray = [];
+for (let i = 0; i < 16; i++) {
+    let iter = iterator.next();
+    fifteenArray[i] = iter.value + (iter.done ? "!" : "#, ");
 }
 
-console.log(fifteenArray.join("#, "));
+console.log(fifteenArray);
 // Only change code above this line
 module.exports = { fifteenArray, myGenerator };
